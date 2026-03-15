@@ -1,0 +1,22 @@
+import streamlit as st
+
+# ===========================
+# News Research Agent
+# ===========================
+def show():
+    st.title("🔍 News Research Agent")
+    st.markdown("Panel para investigar tendencias y sugerir ideas de artículos.")
+
+    trends = [
+        "IA en educación",
+        "Energías renovables",
+        "Deportes locales",
+        "Política regional"
+    ]
+    st.subheader("Tendencias del momento")
+    st.write(trends)
+
+    st.subheader("Propuesta de artículo")
+    idea = st.text_input("Escribe un tema y genera una idea de artículo", "")
+    if st.button("Generar idea"):
+        st.success(f"Idea de artículo generada para '{idea}': 'Cómo {idea} está cambiando nuestra región'")

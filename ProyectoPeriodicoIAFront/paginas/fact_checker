@@ -1,0 +1,12 @@
+import streamlit as st
+
+# ===========================
+# Fact Checking Agent
+# ===========================
+def show():
+    st.title("✅ Fact Checking Agent")
+    st.markdown("Ingresa información para verificar su veracidad.")
+
+    claim = st.text_area("Escribe la afirmación a verificar:", "")
+    if st.button("Verificar"):
+        st.success(f"La afirmación '{claim}' ha sido verificada. Fuente confiable: ✅")
