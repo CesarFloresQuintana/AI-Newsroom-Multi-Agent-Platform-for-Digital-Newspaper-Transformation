@@ -1,0 +1,87 @@
+
+    /* Fondo animado y estilo general */
+    .main {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+    }
+
+
+    .stApp {
+      background-image: url('https://img1.wallspic.com/previews/2/9/7/8/0/108792/108792-tinta-pergamino-x750.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;  /* Ajusta la imagen para cubrir todo el espacio sin deformarse */
+      background-attachment: fixed;  /* Fija la imagen para que no se mueva al hacer scroll */
+      /* Asegura que el body ocupe toda la altura de la pantalla */
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Contenedor Principal (Creación de Cuenta) */
+    [data-testid="stVerticalBlock"] > div:has(div.stButton) {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        /* Bordes redondeados y degradados sutiles */
+        border-radius: 25px !important;
+        padding: 3rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+        /* Animación de aparición */
+        animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Estilo de los inputs */
+    .stTextInput > div > div > input {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        color: #1e1e1e !important;
+        border-radius: 12px !important;
+        border: 2px solid transparent !important;
+        transition: all 0.3s ease;
+    }
+
+    .stTextInput > div > div > input:focus {
+        border: 2px solid #2575fc !important;
+        box-shadow: 0 0 10px rgba(37, 117, 252, 0.5) !important;
+    }
+
+    /* Botón de Registro (Gradient Master) */
+    .stButton > button {
+        width: 100%;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #ff5f6d 0%, #ffc371 100%);
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border: none;
+        padding: 12px;
+        margin-top: 10px;
+        transition: all 0.4s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .stButton > button:hover {
+        background: linear-gradient(135deg, #ffc371 0%, #ff5f6d 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 95, 109, 0.4);
+    }
+
+    h1{
+        text-align: center;
+    }
